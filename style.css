@@ -1,0 +1,188 @@
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --theme-colour: rgb(11, 30, 71);
+    --text-colour: rgb(178, 179, 185);
+    --light-colour: #303646;
+}
+
+@font-face {
+    font-family: 'Panton Black'; /* Name of the font */
+    src: url('fonts/Panton-Trial-Black.ttf') format('truetype'); /* Path to the font file */
+    font-weight: normal; /* Font weight (normal or bold) */
+    font-style: normal; /* Font style (normal, italic, etc.) */
+}
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    height: 97vh;
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0e0f13;
+    border: #777;
+    border-width: 1px;
+}
+
+/* Background image for desktop view */
+body.desktop-background {
+    background-image: url('img/pattern.svg');
+    background-size: 27px 27px;
+    background-position-x: center;
+}
+
+
+.viewport {
+    background-color: #13151b;
+    margin: 10px;
+    padding: 0px;
+    border-radius: 24px;
+    border: var(--light-colour);
+    border-width: 1px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 92%;
+    max-width: 450px; /* Prevents viewport from getting too large */
+}
+
+header {
+    font-family: 'Panton Black';
+    text-align: center;
+    padding: 20px;
+    font-size: 1.2em;
+    background-color: var(--theme-colour);
+    color: var(--text-colour);
+    border-radius: 15px 15px 0 0;
+}
+
+.content {
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.square {
+    position: relative;
+    padding: 0px;
+    border-radius: 10px;
+    width: 47.3%;
+    aspect-ratio: 1 / 1;  /* Ensures the squares are always square */
+    background-color: var(--light-colour);
+}
+
+.victory-text {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.input-section {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    margin-top: 50px;
+    color: var(--text-colour);
+}
+
+.input-section:active {
+    border: var(--text-colour);
+    border-width: 1px;
+}
+
+input[type="text"] {
+    width: 100%;
+    max-width: 120px;
+    padding: 5px;
+    font-size: 1.2em;
+    border: 2px solid var(--theme-colour);
+    background-color: var(--light-colour);
+    color: var(--text-colour);
+    border-radius: 5px;
+}
+
+.submit-button{
+    width: 100%;
+    max-width: 36px;
+    max-height: 36px;
+    padding: 0px;
+    margin-left: 10px;
+    font-size: 16px;
+    color: var(--text-colour);
+    background-color: var(--theme-colour);
+    border: 2px solid var(--theme-colour);
+    border-radius: 5px;
+}
+
+.submit-button:hover{
+    background-color: #162d66;
+    animation-duration: 0.5s;
+}
+
+.guide-text {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: var(--text-colour);
+    margin: 30px;
+}
+
+.hint-section {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.hint {
+    flex: 1;
+    color: var(--text-colour);
+    background-color: var(--light-colour);
+    border: 1px solid var(--light-colour);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 20px;
+}
+
+.hint-colour {
+    text-align: center;
+}
+
+.guess-list {
+    justify-content: center;
+    align-content: center;
+    display: flex;
+    text-align: center;
+}
+
+.guess {
+    margin: 3px; /* Space between guesses */
+}
+
+
+
+@media (min-width: 768px) {
+    .viewport {
+        width: 56.25vh; /* 9:16 aspect ratio */
+        height: 95vh;
+        max-height: 900px;
+        margin: auto;
+        position: relative;
+        padding: 0px;
+    }
+}

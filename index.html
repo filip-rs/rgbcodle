@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RGBcodle</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="viewport">
+        <header>
+            <h1>RGBCODLE</h1>
+        </header>
+        <div class="content">
+            <div id="squareOne" class="square"></div>
+            <div id="squareTwo" class="square"></div>
+        </div>
+        
+        <div class="input-section">
+            <input type="text" id="rgbInput" placeholder="###,###,###">
+            <button id="submitBtn" class="submit-button">➜</button>
+        </div>
+
+        <p id="successMessage" class="guide-text">
+            Submit your guess as three numbers from 0 to 255
+        </p>
+
+        <div class="hint-section">
+            <div class="hint" id="hintR">
+                <h3 class="hint-colour">Red</h3>
+                <div class="guess-list" id="guessListR"></div>
+            </div>
+            <div class="hint" id="hintG">
+                <h3 class="hint-colour">Green</h3>
+                <div class="guess-list" id="guessListG"></div>
+            </div>
+            <div class="hint" id="hintB">
+                <h3 class="hint-colour">Blue</h3>
+                <div class="guess-list" id="guessListB"></div>
+            </div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
