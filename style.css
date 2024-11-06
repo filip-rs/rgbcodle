@@ -111,7 +111,7 @@ input[type="text"] {
     border: 2px solid var(--theme-colour);
     background-color: var(--light-colour);
     color: var(--text-colour);
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .submit-button{
@@ -124,7 +124,7 @@ input[type="text"] {
     color: var(--text-colour);
     background-color: var(--theme-colour);
     border: 2px solid var(--theme-colour);
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .submit-button:hover{
@@ -143,20 +143,19 @@ input[type="text"] {
 
 .hint-section {
     display: flex;
-    justify-content: space-between;
-    margin: 15px;
-    margin-left: 0px;
-    margin-right: 0px;
+    justify-content: center;
+    margin: 10px;
 }
 
 .hint {
-    flex: 1;
+    text-align: center;
     color: var(--text-colour);
     background-color: var(--light-colour);
     border: 1px solid var(--light-colour);
     border-radius: 10px;
-    padding: 10px;
-    margin: 20px;
+    padding: 20px;
+    margin: 10px;
+    width: 33%;
 }
 
 .hint-colour {
